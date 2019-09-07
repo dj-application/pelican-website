@@ -42,7 +42,7 @@ vim content/fish.md
 pelican content
 ```
 
-# Preview your site
+## Preview your site
 ```
 pelican --listen
 
