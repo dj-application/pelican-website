@@ -75,7 +75,6 @@ git push origin gh-pages
 
 
 ## Reference
-
-  * [Documentation](https://docs.getpelican.com/en/stable/)
   * [Tutorials](https://github.com/getpelican/pelican/wiki/Tutorials)
+  * [Documentation](https://docs.getpelican.com/en/stable/)
   * [Getting Started with Pelican on Github Pages](https://blog.justalfred.com/getting-started-with-pelican-on-github-pages.html)
