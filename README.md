@@ -29,24 +29,21 @@ pelican-quickstart
 > Do you want to upload your website using Dropbox? (y/N) n
 > Do you want to upload your website using S3? (y/N) n
 > Do you want to upload your website using Rackspace Cloud Files? (y/N) n
-> Do you want to upload your website using GitHub Pages? (y/
+> Do you want to upload your website using GitHub Pages? (y/N) y
 ```
 
 ## Add content in a markdown file
 ```
 vim content/fish.md
-Title: My First Review
-Date: 2010-12-03 10:20
-Category: Review
-
-Following is a review of my favorite mechanical keyboard.
 ```
 
 ## Generate a site
 ```
 pelican content
+```
 
-# preview your site
+# Preview your site
+```
 pelican --listen
 
 # Navigate to http://localhost:8000/ in your browser.
