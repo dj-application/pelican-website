@@ -55,13 +55,13 @@ pelican --listen
 git clone --recursive https://github.com/getpelican/pelican-themes ../pelican-themes
 
 # Add a theme in the pelicanconf.py of your site (e.g. fishingbird/pelicanconf.py)
-THEME = '../pelican-themes/blue-penguin'
+THEME = '../pelican-themes/bootstrap2'
 ```
 
 ## Publishing to Github project page
 ```
 pelican content -o output -s pelicanconf.py
-ghp-import output -n 
+ghp-import output -n
 git push origin gh-pages
 ```
 
@@ -72,7 +72,6 @@ git push origin gh-pages
   * publishconf.py - This file contains settings that are only used when you’re ready to publish to the web.
   * content/ - This folder is where you’ll put the templates and files that will be translated into the content of your site.
   * output/ - This folder might not exist until you convert your content into html. By default, the translated website lands here.
-  * fabfile.py - This has something to do with fabric which I don’t use.
 
 
 ## Reference
