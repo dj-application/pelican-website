@@ -4,8 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'j'
 SITENAME = 'Fishing Birds'
-SITEURL = ''
-
+SITEURL = 'https://dj-application.github.io/pelican-website/'
 PATH = 'content'
 
 TIMEZONE = 'Europe/Paris'
