@@ -1,7 +1,7 @@
 ## What is Pelican?
 Pelican is a Python library that lets you generate static websites from templates.
 
-## Installation
+## 1. Installation
 ```
 # Install pelican
 pip install pelican markdown
@@ -11,7 +11,7 @@ mkdir -p pelican-website/fishingbird
 cd pelican-website/fishingbird
 ```
 
-## Generate the initial boilerplate
+## 2. Generate the initial boilerplate
 ```
 pelican-quickstart
 
@@ -32,24 +32,24 @@ pelican-quickstart
 > Do you want to upload your website using GitHub Pages? (y/N) y
 ```
 
-## Add content in a markdown file
+## 3. Add content in a markdown file
 ```
 vim content/fish.md
 ```
 
-## Generate your site
+## 4. Generate your site
 ```
 pelican content
 ```
 
-## Preview your site
+## 5. Preview your site
 ```
 pelican --listen
 
 # Navigate to http://localhost:8000/ in your browser.
 ```
 
-## How to add a theme?
+## 6. How to add a theme?
 ```
 # Choose a path for to clone pelican-themes directory (e.g. pelican-website/)
 git clone --recursive https://github.com/getpelican/pelican-themes ../pelican-themes
@@ -58,14 +58,18 @@ git clone --recursive https://github.com/getpelican/pelican-themes ../pelican-th
 THEME = '../pelican-themes/bootstrap2'
 ```
 
-## Publishing to Github project page
+## 7. Publishing to Github project page
+```
+# Add your SITE_URL in pelicanconf.py
+SITEURL = 'https://dj-application.github.io/pelican-website/'
+```
 ```
 pelican content -o output -s pelicanconf.py
 ghp-import output -n
 git push origin gh-pages
 ```
 
-## What are the files?
+## 8. What are the files?
 
   * Makefile - This file defines make commands that perform the most important tasks like generating your site and starting a local http server.
   * pelicanconf.py - This file contains settings to customize your site.
@@ -74,7 +78,10 @@ git push origin gh-pages
   * output/ - This folder might not exist until you convert your content into html. By default, the translated website lands here.
 
 
-## Reference
+## 9. Reference
   * [Tutorials](https://github.com/getpelican/pelican/wiki/Tutorials)
   * [Documentation](https://docs.getpelican.com/en/stable/)
+  * [python-livereload](https://github.com/lepture/python-livereload#script-example-sphinx)
+  * [Using LiveReload with Pelican](https://merlijn.vandeen.nl/2015/pelican-livereload.html)
   * [Getting Started with Pelican on Github Pages](https://blog.justalfred.com/getting-started-with-pelican-on-github-pages.html)
+  * [Blog migrated to Pelican and GitHub pages](https://dirtyhandscoding.github.io/posts/blog-migrated-to-pelican-and-github-pages.html)
