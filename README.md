@@ -60,11 +60,9 @@ THEME = '../pelican-themes/bootstrap2'
 
 ## 6.2 Optional: Add theme as git module
 ```
-# Add perlican-theme as a git submodule and rename it as theme
+# Add a `.gitmodules` file and a directory `themes/` in the project `perclican-website`
 git submodule add git@github.com:getpelican/pelican-themes.git themes
 git commit -am "Add pelican-themes as a submodule"
-
-# A `.gitmodules` file and a directory `theme/`` are added in the project `perclican-website`
 
 # Commit
 git commit -am 'Add theme as a submodule'
@@ -73,35 +71,54 @@ git commit -am 'Add theme as a submodule'
 git submodule status
 '565dc8959ad2573c4a9245eaaec73916c782f6d9 theme (heads/master)'
 
-# initialize bootstrap2 theme
-git submodule init theme/bootstrap2
+# Check available themes
+cd themes
+git submodule status
+
+# Initialize the bootstrap2 theme
+git submodule init bootstrap2
 
 # Clone the missing submodules
 git submodule update
-
+cd ..
+```
+```
 # Add the theme path in the pelicanconf.py of your site (e.g. fishingbird/pelicanconf.py)
-THEME = '../pelican-themes/bootstrap2'
+THEME = '../themes/bootstrap2'
 ```
 
 ## 7. Publish to Github project page
 ```
-# Add your SITE_URL in pelicanconf.py
+# Add your SITE_URL in pelicanconf.py (e.g. fishingbird/pelicanconf.py)
 SITEURL = 'https://dj-application.github.io/pelican-website/'
 ```
 ```
+cd fishingbird
 pelican content -o output -s pelicanconf.py
 ghp-import output -n
 git push origin gh-pages
 ```
 
 ## 8. What are the files?
+  ------------
+     ├── License.md
+     ├── README.md
+     ├── fishingbird
+     │   ├── Makefile
+     │   ├── content
+     │   ├── output
+     │   ├── pelicanconf.py
+     │   ├── publishconf.py
+     │   └── tasks.py
+     ├── requirements.txt
+     └──  themes
 
-  * Makefile - This file defines make commands that perform the most important tasks like generating your site and starting a local http server.
-  * pelicanconf.py - This file contains settings to customize your site.
-  * publishconf.py - This file contains settings that are only used when you’re ready to publish to the web.
-  * content/ - This folder is where you’ll put the templates and files that will be translated into the content of your site.
-  * output/ - This folder might not exist until you convert your content into html. By default, the translated website lands here.
 
+   * Makefile - This file defines make commands that perform the most important tasks like generating your site and starting a local http server.
+   * pelicanconf.py - This file contains settings to customize your site.
+   * publishconf.py - This file contains settings that are only used when you’re ready to publish to the web.
+   *  content/ - This folder is where you’ll put the templates and files that will be translated into the content of your site.
+   *  output/ - This folder might not exist until you convert your content into html. By default, the translated website lands here.
 
 
 ## 9. Reference
