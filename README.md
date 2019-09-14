@@ -63,13 +63,21 @@ git submodule add https://github.com/getpelican/pelican-themes.git pelican-theme
 
 # A `.gitmodules` file and a module `pelican-themes/bootstrap2` are added in the project `perclican-website`
 
- # Commit
+# Commit
+git commit -am 'Add pelican-themes/bootstrap2 as a submodule'
 
- git commit -am 'Add pelican-themes/bootstrap2 as a submodule'
- git submodule status
+# Check whether the theme is listed as a submodule
+git submodule status
+'565dc8959ad2573c4a9245eaaec73916c782f6d9 pelican-themes/bootstrap2 (heads/master)'
 
+# initialize bootstrap2 theme
+git submodule init pelican-themes/bootstrap2
 
+# Clone the missing submodules
+git submodule update
 
+# Add the theme path in the pelicanconf.py of your site (e.g. fishingbird/pelicanconf.py)
+THEME = '../pelican-themes/bootstrap2'
 ```
 
 
