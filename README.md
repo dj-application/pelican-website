@@ -49,7 +49,8 @@ pelican --listen
 # Navigate to http://localhost:8000/ in your browser.
 ```
 
-## 6. How to add a theme?
+## 6. Optional:
+## 6.1 How to add a theme?
 ```
 # Choose a path for to clone pelican-themes directory (e.g. pelican-website/)
 git clone --recursive https://github.com/getpelican/pelican-themes ../pelican-themes
@@ -58,16 +59,15 @@ git clone --recursive https://github.com/getpelican/pelican-themes ../pelican-th
 THEME = '../pelican-themes/bootstrap2'
 ```
 
-## 6.2 Optional: Add theme as git module
+## 6.2  How to add theme as git module
 ```
-# Add a `.gitmodules` file and a directory `themes/` in the project `perclican-website`
+# Add a .gitmodules and a directory `themes/` in the project perclican-website
 git submodule add git@github.com:getpelican/pelican-themes.git themes
-git commit -am "Add pelican-themes as a submodule"
 
 # Commit
 git commit -am 'Add theme as a submodule'
 
-# Check whether the theme is listed as a submodule
+# Check whether the themes is listed as a submodule
 git submodule status
 '565dc8959ad2573c4a9245eaaec73916c782f6d9 theme (heads/master)'
 
@@ -78,7 +78,7 @@ git submodule status
 # Initialize the bootstrap2 theme
 git submodule init bootstrap2
 
-# Clone the missing submodules
+# Update the submodule
 git submodule update
 cd ..
 ```
