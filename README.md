@@ -60,19 +60,21 @@ THEME = '../pelican-themes/bootstrap2'
 
 ## 6.2 Optional: Add theme as git module
 ```
-# Add perlican-theme as a git submodule and rename it as blogtheme
-git submodule add https://github.com/getpelican/pelican-themes.git blogtheme
-# A `.gitmodules` file and a directory `blogtheme/`` are added in the project `perclican-website`
+# Add perlican-theme as a git submodule and rename it as theme
+git submodule add git@github.com:getpelican/pelican-themes.git themes
+git commit -am "Add pelican-themes as a submodule"
+
+# A `.gitmodules` file and a directory `theme/`` are added in the project `perclican-website`
 
 # Commit
-git commit -am 'Add blogtheme as a submodule'
+git commit -am 'Add theme as a submodule'
 
 # Check whether the theme is listed as a submodule
 git submodule status
-'565dc8959ad2573c4a9245eaaec73916c782f6d9 blogtheme (heads/master)'
+'565dc8959ad2573c4a9245eaaec73916c782f6d9 theme (heads/master)'
 
 # initialize bootstrap2 theme
-git submodule init blogtheme/bootstrap2
+git submodule init theme/bootstrap2
 
 # Clone the missing submodules
 git submodule update
@@ -107,5 +109,5 @@ git push origin gh-pages
   * [Documentation](https://docs.getpelican.com/en/stable/)
   * [python-livereload](https://github.com/lepture/python-livereload#script-example-sphinx)
   * [Using LiveReload with Pelican](https://merlijn.vandeen.nl/2015/pelican-livereload.html)
-  * [Getting Started with Pelican on Github Pages](https://blog.justalfred.com/getting-started-with-pelican-on-github-pages.html)
-  * [Blog migrated to Pelican and GitHub pages](https://dirtyhandscoding.github.io/posts/blog-migrated-to-pelican-and-github-pages.html)
+  * [Getting Started with Pelican on Github Pages](https://.justalfred.com/getting-started-with-pelican-on-github-pages.html)
+  * [ migrated to Pelican and GitHub pages](https://dirtyhandscoding.github.io/posts/-migrated-to-pelican-and-github-pages.html)
