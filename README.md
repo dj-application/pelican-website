@@ -57,8 +57,23 @@ git clone --recursive https://github.com/getpelican/pelican-themes ../pelican-th
 # Add a theme in the pelicanconf.py of your site (e.g. fishingbird/pelicanconf.py)
 THEME = '../pelican-themes/bootstrap2'
 ```
+## 6.2 Optional: Add theme as git module
+```
+git submodule add https://github.com/getpelican/pelican-themes.git pelican-themes/bootstrap2
 
-## 7. Publishing to Github project page
+# A `.gitmodules` file and a module `pelican-themes/bootstrap2` are added in the project `perclican-website`
+
+ # Commit
+
+ git commit -am 'Add pelican-themes/bootstrap2 as a submodule'
+ git submodule status
+
+
+
+```
+
+
+## 7. Publish to Github project page
 ```
 # Add your SITE_URL in pelicanconf.py
 SITEURL = 'https://dj-application.github.io/pelican-website/'
@@ -69,6 +84,7 @@ ghp-import output -n
 git push origin gh-pages
 ```
 
+# 7.2 Output websites into a root folder
 ## 8. What are the files?
 
   * Makefile - This file defines make commands that perform the most important tasks like generating your site and starting a local http server.
@@ -76,6 +92,7 @@ git push origin gh-pages
   * publishconf.py - This file contains settings that are only used when you’re ready to publish to the web.
   * content/ - This folder is where you’ll put the templates and files that will be translated into the content of your site.
   * output/ - This folder might not exist until you convert your content into html. By default, the translated website lands here.
+
 
 
 ## 9. Reference
