@@ -69,7 +69,7 @@ git commit -am 'Add blogtheme as a submodule'
 
 # Check whether the theme is listed as a submodule
 git submodule status
-'565dc8959ad2573c4a9245eaaec73916c782f6d9 blogtheme/bootstrap2 (heads/master)'
+'565dc8959ad2573c4a9245eaaec73916c782f6d9 blogtheme (heads/master)'
 
 # initialize bootstrap2 theme
 git submodule init blogtheme/bootstrap2

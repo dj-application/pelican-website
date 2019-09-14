@@ -34,4 +34,4 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 
 # I added a theme
-THEME = '../pelican-themes/bootstrap2'
+THEME = '../blogtheme/bootstrap2'
