@@ -1,0 +1,3 @@
+[submodule "blogtheme"]
+	path = blogtheme
+	url = https://github.com/getpelican/pelican-themes.git

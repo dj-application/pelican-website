@@ -57,21 +57,22 @@ git clone --recursive https://github.com/getpelican/pelican-themes ../pelican-th
 # Add a theme in the pelicanconf.py of your site (e.g. fishingbird/pelicanconf.py)
 THEME = '../pelican-themes/bootstrap2'
 ```
+
 ## 6.2 Optional: Add theme as git module
 ```
-git submodule add https://github.com/getpelican/pelican-themes.git pelican-themes/bootstrap2
-
-# A `.gitmodules` file and a module `pelican-themes/bootstrap2` are added in the project `perclican-website`
+# Add perlican-theme as a git submodule and rename it as blogtheme
+git submodule add https://github.com/getpelican/pelican-themes.git blogtheme
+# A `.gitmodules` file and a directory `blogtheme/`` are added in the project `perclican-website`
 
 # Commit
-git commit -am 'Add pelican-themes/bootstrap2 as a submodule'
+git commit -am 'Add blogtheme as a submodule'
 
 # Check whether the theme is listed as a submodule
 git submodule status
-'565dc8959ad2573c4a9245eaaec73916c782f6d9 pelican-themes/bootstrap2 (heads/master)'
+'565dc8959ad2573c4a9245eaaec73916c782f6d9 blogtheme/bootstrap2 (heads/master)'
 
 # initialize bootstrap2 theme
-git submodule init pelican-themes/bootstrap2
+git submodule init blogtheme/bootstrap2
 
 # Clone the missing submodules
 git submodule update
@@ -79,7 +80,6 @@ git submodule update
 # Add the theme path in the pelicanconf.py of your site (e.g. fishingbird/pelicanconf.py)
 THEME = '../pelican-themes/bootstrap2'
 ```
-
 
 ## 7. Publish to Github project page
 ```
@@ -92,7 +92,6 @@ ghp-import output -n
 git push origin gh-pages
 ```
 
-# 7.2 Output websites into a root folder
 ## 8. What are the files?
 
   * Makefile - This file defines make commands that perform the most important tasks like generating your site and starting a local http server.
